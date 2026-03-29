@@ -21,6 +21,11 @@
     <meta name="geo.position" content="54.438611;-3.047306">
     <meta name="ICBM" content="54.438611;-3.047306">
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+
     <!-- Technical -->
     <link rel="canonical" href="https://r3sn1p3s.github.io/arwenscakes">
     <title>Arwens Cake & Candle Cupboard | Fresh Bakes & Candles in Langdale</title>
@@ -28,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
+        /* All your existing styles go here – unchanged */
         :root{
             --accent:#e07a5f;
             --green:#2c3e2f;
@@ -45,7 +51,6 @@
             font-family:'Playfair Display',serif;
         }
 
-        /* NAV */
         nav{
             position:fixed;
             top:10px;
@@ -170,7 +175,6 @@
         }
         @keyframes shine{ 0%{left:-75%;} 100%{left:125%;} }
 
-        /* HERO */
         header{
             height:95vh;
             min-height: 600px;
@@ -210,7 +214,6 @@
             font-size:1.05rem;
         }
 
-        /* SECTIONS */
         section{
             padding:70px 20px;
             max-width:1100px;
@@ -345,6 +348,8 @@
 </head>
 <body>
 
+    <!-- Your entire body content (nav, header, sections, footer, floating button, scripts) remains exactly the same as the previous version -->
+
     <nav>
         <div class="logo">🍰 Arwens Cake & Candle Cupboard</div>
         
@@ -360,7 +365,6 @@
         <button class="hamburger" aria-label="Toggle menu">☰</button>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#menu">Today's Bakes</a>
         <a href="#gifts">Candle Gifts</a>
@@ -435,14 +439,14 @@
 
     <a class="floating-nav" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate</a>
 
-    <!-- LocalBusiness Schema Markup -->
+    <!-- Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Bakery",
       "name": "Arwens Cake & Candle Cupboard",
       "image": "https://i.postimg.cc/vTVpV8PS/ntv5KPHq.jpg",
-      "description": "Fresh honest bakes and handmade candles in Langdale, Lake District. Located at Church Hall Cottage, Chapel Stile.",
+      "description": "Fresh honest bakes and handmade candles in Langdale, Lake District.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Church Hall Cottage, Chapel Stile",
@@ -463,17 +467,12 @@
     </script>
 
     <script>
-        // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
 
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
-            if (mobileMenu.classList.contains('active')) {
-                hamburger.textContent = '✕';
-            } else {
-                hamburger.textContent = '☰';
-            }
+            hamburger.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
         });
 
         document.querySelectorAll('.mobile-menu a').forEach(link => {
@@ -483,7 +482,6 @@
             });
         });
 
-        // Menu items
         const items = [
             {name:"Chocolate Brownie",price:"£2.50",img:"https://i.postimg.cc/qRTN6gMx/Brownie.jpg",stock:20},
             {name:"School Cake",price:"£2.50",img:"https://i.postimg.cc/br1nCJq3/School-Cake.webp",stock:20},
@@ -514,15 +512,11 @@
             grid.appendChild(div);
         });
 
-        // Intersection Observer for cards
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if(e.isIntersecting) e.target.classList.add('visible');
-            });
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
         });
         document.querySelectorAll('.card').forEach(el => observer.observe(el));
 
-        // Time-based message
         const hour = new Date().getHours();
         const weatherText = document.getElementById("weatherText");
         if(hour < 12) weatherText.innerText = "Perfect morning for cake ☕";
