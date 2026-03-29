@@ -1,526 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arwens Cake & Candle Cupboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --accent:#e07a5f;
-  --green:#2c3e2f;
-  --bg:#f9f7f4;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:#333;
-}
-h1,h2,h3{
-  font-family:'Playfair Display',serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh honest bakes, handmade candles and gifts in Langdale, Lake District. Visit Church Hall Cottage, Chapel Stile for daily cakes, brownies, flapjacks and Lake District candle collection.">
+    <meta name="keywords" content="bakery Langdale, cakes Lake District, fresh bakes Chapel Stile, handmade candles Langdale, Lake District cake shop, Chapel Stile bakery">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Arwens Cake & Candle Cupboard | Fresh Bakes & Candles in Langdale">
+    <meta property="og:description" content="Honest fresh bakes and handmade candles in the heart of the Lake District. Perfect post-walk treat at Church Hall Cottage, Chapel Stile.">
+    <meta property="og:image" content="https://i.postimg.cc/vTVpV8PS/ntv5KPHq.jpg">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
 
-/* ==================== NAV ==================== */
-nav{
-  position:fixed;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  width:92%;
-  max-width:1100px;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(0,0,0,0.05);
-  border-radius:50px;
-  padding:12px 18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:1000;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
+    <!-- Local SEO -->
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="Chapel Stile, Langdale, Lake District">
+    <meta name="geo.position" content="54.438611;-3.047306">
+    <meta name="ICBM" content="54.438611, -3.047306">
 
-nav .logo{
-  font-weight:700;
-  font-size:1.1rem;
-  white-space: nowrap;
-}
+    <!-- Technical -->
+    <link rel="canonical" href="https://yourusername.github.io">
+    <title>Arwens Cake & Candle Cupboard | Fresh Bakes & Candles in Langdale</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-.desktop-menu {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+    <style>
+        :root{
+            --accent:#e07a5f;
+            --green:#2c3e2f;
+            --bg:#f9f7f4;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body{
+            margin:0;
+            font-family:'Inter',sans-serif;
+            background:var(--bg);
+            color:#333;
+        }
+        h1,h2,h3{
+            font-family:'Playfair Display',serif;
+        }
 
-nav a{
-  text-decoration:none;
-  padding:8px 12px;
-  border-radius:20px;
-  color:#333;
-  font-weight:500;
-  transition:0.3s;
-  white-space: nowrap;
-}
-nav a:hover{background:#f2eee9;}
+        /* NAV */
+        nav{
+            position:fixed;
+            top:10px;
+            left:50%;
+            transform:translateX(-50%);
+            width:92%;
+            max-width:1100px;
+            background:rgba(255,255,255,0.85);
+            backdrop-filter:blur(14px);
+            border:1px solid rgba(0,0,0,0.05);
+            border-radius:50px;
+            padding:12px 18px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:1000;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        }
 
-nav .cta{
-  background:var(--accent);
-  color:white;
-  padding:10px 18px;
-  border-radius:30px;
-  font-weight:600;
-  box-shadow:0 6px 15px rgba(224,122,95,0.3);
-  position:relative;
-  overflow:hidden;
-  animation:pulseGlow 2.2s infinite;
-  white-space: nowrap;
-}
+        nav .logo{
+            font-weight:700;
+            font-size:1.1rem;
+            white-space: nowrap;
+        }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  padding: 8px;
-  background: none;
-  border: none;
-  color: #333;
-}
+        .desktop-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-/* Mobile Menu Overlay */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(249, 247, 244, 0.98);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  z-index: 1100;
-  padding: 80px 20px 40px;
-}
+        nav a{
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:20px;
+            color:#333;
+            font-weight:500;
+            transition:0.3s;
+            white-space: nowrap;
+        }
+        nav a:hover{background:#f2eee9;}
 
-.mobile-menu a {
-  font-size: 1.4rem;
-  padding: 12px 30px;
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-}
+        nav .cta{
+            background:var(--accent);
+            color:white;
+            padding:10px 18px;
+            border-radius:30px;
+            font-weight:600;
+            box-shadow:0 6px 15px rgba(224,122,95,0.3);
+            position:relative;
+            overflow:hidden;
+            animation:pulseGlow 2.2s infinite;
+            white-space: nowrap;
+        }
 
-.mobile-menu .cta {
-  font-size: 1.3rem;
-  padding: 16px 32px;
-}
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            color: #333;
+        }
 
-/* Show mobile menu when active */
-.mobile-menu.active {
-  display: flex;
-}
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(249, 247, 244, 0.98);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1100;
+            padding: 80px 20px 40px;
+        }
 
-/* Desktop-only */
-@media (max-width: 899px) {
-  .desktop-menu {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  
-  nav {
-    padding: 12px 16px;
-    border-radius: 9999px;
-  }
-}
+        .mobile-menu a {
+            font-size: 1.4rem;
+            padding: 12px 30px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-/* Desktop */
-@media (min-width: 900px) {
-  .hamburger { display: none; }
-}
+        .mobile-menu .cta {
+            font-size: 1.3rem;
+            padding: 16px 32px;
+        }
 
-/* Animations (unchanged) */
-@keyframes pulseGlow{
-  0%{transform:scale(1);box-shadow:0 6px 15px rgba(224,122,95,0.25);}
-  50%{transform:scale(1.05);box-shadow:0 10px 25px rgba(224,122,95,0.45);}
-  100%{transform:scale(1);box-shadow:0 6px 15px rgba(224,122,95,0.25);}
-}
-nav .cta::after{
-  content:"";
-  position:absolute;
-  top:0; left:-75%;
-  width:50%; height:100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
-  transform:skewX(-20deg);
-  animation:shine 3.5s infinite;
-}
-@keyframes shine{ 0%{left:-75%;} 100%{left:125%;} }
+        .mobile-menu.active {
+            display: flex;
+        }
 
-/* ==================== HERO ==================== */
-header{
-  height:95vh;
-  min-height: 600px;
-  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),
-              url('https://i.postimg.cc/vTVpV8PS/ntv5KPHq.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding-top:90px; /* more space for fixed nav */
-}
+        @media (max-width: 899px) {
+            .desktop-menu { display: none; }
+            .hamburger { display: block; }
+            nav { padding: 12px 16px; border-radius: 9999px; }
+        }
 
-.hero h1{
-  font-size: clamp(2.2rem, 8vw, 3.8rem); /* responsive font */
-  line-height:1.1;
-  margin-bottom: 0.5rem;
-}
-.hero p{
-  font-size:1.15rem;
-  max-width: 420px;
-  margin: 0 auto 1.5rem;
-}
+        @media (min-width: 900px) {
+            .hamburger { display: none; }
+        }
 
-/* BUTTON */
-.btn{
-  margin-top:25px;
-  padding:14px 32px;
-  border-radius:40px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  font-weight:600;
-  font-size:1.05rem;
-}
+        @keyframes pulseGlow{
+            0%{transform:scale(1);box-shadow:0 6px 15px rgba(224,122,95,0.25);}
+            50%{transform:scale(1.05);box-shadow:0 10px 25px rgba(224,122,95,0.45);}
+            100%{transform:scale(1);box-shadow:0 6px 15px rgba(224,122,95,0.25);}
+        }
+        nav .cta::after{
+            content:"";
+            position:absolute;
+            top:0; left:-75%;
+            width:50%; height:100%;
+            background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
+            transform:skewX(-20deg);
+            animation:shine 3.5s infinite;
+        }
+        @keyframes shine{ 0%{left:-75%;} 100%{left:125%;} }
 
-/* ==================== SECTIONS ==================== */
-section{
-  padding:70px 20px;
-  max-width:1100px;
-  margin:auto;
-}
+        /* HERO */
+        header{
+            height:95vh;
+            min-height: 600px;
+            background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),
+                        url('https://i.postimg.cc/vTVpV8PS/ntv5KPHq.jpg') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+            padding-top:90px;
+        }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-}
+        .hero h1{
+            font-size: clamp(2.2rem, 8vw, 3.8rem);
+            line-height:1.1;
+            margin-bottom: 0.5rem;
+        }
+        .hero p{
+            font-size:1.15rem;
+            max-width: 420px;
+            margin: 0 auto 1.5rem;
+        }
 
-/* Cards */
-.card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  opacity:0;
-  transform:translateY(30px);
-  transition:0.6s;
-}
-.card.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-.card-body{padding:20px;}
-.badge{display:block;margin-top:5px;font-weight:600;}
-.available{color:green}
-.low{color:#c97a00}
+        .btn{
+            margin-top:25px;
+            padding:14px 32px;
+            border-radius:40px;
+            background:var(--accent);
+            color:white;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            min-height:48px;
+            font-weight:600;
+            font-size:1.05rem;
+        }
 
-/* Other sections (unchanged styling) */
-.feature-wrap{
-  background: linear-gradient(180deg,#ffffff,#f3efe9);
-  border-radius:24px;
-  padding:50px 30px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.05);
-}
-.steps{
-  margin-top:30px;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.step{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  background:white;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.06);
-  position:relative;
-  overflow:hidden;
-  opacity:0;
-  transform:translateY(15px);
-  animation:fadeUp 0.6s ease forwards;
-}
-.step:nth-child(1){animation-delay:0.1s}
-.step:nth-child(2){animation-delay:0.2s}
-.step:nth-child(3){animation-delay:0.3s}
-.step:nth-child(4){animation-delay:0.4s}
-.step::before{
-  content:"";
-  position:absolute;
-  left:0; top:0;
-  width:6px; height:100%;
-  background:var(--accent);
-}
-.icon{
-  font-size:1.6rem;
-  width:48px; height:48px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f7f1ed;
-  border-radius:14px;
-  flex-shrink:0;
-}
-.step h3{margin:0;font-size:1.1rem}
-.step p{margin:4px 0 0;color:#666;font-size:0.95rem}
+        /* SECTIONS */
+        section{
+            padding:70px 20px;
+            max-width:1100px;
+            margin:auto;
+        }
 
-@keyframes fadeUp{ to{opacity:1;transform:translateY(0);} }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        }
 
-.testimonial-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-.testimonial-card{
-  background:linear-gradient(135deg,#fff,#f7f3ec);
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
+        .card{
+            background:white;
+            border-radius:16px;
+            overflow:hidden;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+            opacity:0;
+            transform:translateY(30px);
+            transition:0.6s;
+        }
+        .card.visible{
+            opacity:1;
+            transform:translateY(0);
+        }
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+        .card-body{padding:20px;}
+        .badge{display:block;margin-top:5px;font-weight:600;}
+        .available{color:green}
+        .low{color:#c97a00}
 
-.payment-modern{
-  background:linear-gradient(135deg,#2c3e2f,#3d5a40);
-  color:white;
-  border-radius:24px;
-  padding:40px;
-  text-align:center;
-  box-shadow:0 20px 50px rgba(0,0,0,0.2);
-}
+        .feature-wrap{
+            background: linear-gradient(180deg,#ffffff,#f3efe9);
+            border-radius:24px;
+            padding:50px 30px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.05);
+        }
+        .steps{
+            margin-top:30px;
+            display:flex;
+            flex-direction:column;
+            gap:16px;
+        }
+        .step{
+            display:flex;
+            align-items:center;
+            gap:18px;
+            background:white;
+            padding:20px;
+            border-radius:18px;
+            box-shadow:0 12px 30px rgba(0,0,0,0.06);
+            position:relative;
+            overflow:hidden;
+            opacity:0;
+            transform:translateY(15px);
+            animation:fadeUp 0.6s ease forwards;
+        }
+        .step:nth-child(1){animation-delay:0.1s}
+        .step:nth-child(2){animation-delay:0.2s}
+        .step:nth-child(3){animation-delay:0.3s}
+        .step:nth-child(4){animation-delay:0.4s}
+        .step::before{
+            content:"";
+            position:absolute;
+            left:0; top:0;
+            width:6px; height:100%;
+            background:var(--accent);
+        }
+        .icon{
+            font-size:1.6rem;
+            width:48px; height:48px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#f7f1ed;
+            border-radius:14px;
+            flex-shrink:0;
+        }
+        .step h3{margin:0;font-size:1.1rem}
+        .step p{margin:4px 0 0;color:#666;font-size:0.95rem}
 
-#find iframe{
-  width:100%;
-  height:450px;
-  border:0;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  margin-top:10px;
-}
+        @keyframes fadeUp{ to{opacity:1;transform:translateY(0);} }
 
-footer{
-  background:var(--green);
-  color:white;
-  text-align:center;
-  padding:50px 20px;
-}
+        #find iframe{
+            width:100%;
+            height:450px;
+            border:0;
+            border-radius:18px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.08);
+            margin-top:10px;
+        }
 
-/* Floating button - kept but made slightly smaller on mobile */
-.floating-nav{
-  position:fixed;
-  bottom:18px;
-  right:18px;
-  background:var(--accent);
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:600;
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  text-decoration:none;
-  animation:floatPulse 2.2s infinite;
-}
-@keyframes floatPulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.08);}
-  100%{transform:scale(1);}
-}
+        footer{
+            background:var(--green);
+            color:white;
+            text-align:center;
+            padding:50px 20px;
+        }
 
-@media (max-width: 480px) {
-  section { padding: 60px 15px; }
-  .feature-wrap { padding: 40px 20px; }
-}
-</style>
+        .floating-nav{
+            position:fixed;
+            bottom:18px;
+            right:18px;
+            background:var(--accent);
+            color:white;
+            padding:14px 18px;
+            border-radius:50px;
+            font-weight:600;
+            box-shadow:0 12px 30px rgba(0,0,0,0.25);
+            z-index:9999;
+            display:flex;
+            align-items:center;
+            gap:8px;
+            text-decoration:none;
+            animation:floatPulse 2.2s infinite;
+        }
+        @keyframes floatPulse{
+            0%{transform:scale(1);}
+            50%{transform:scale(1.08);}
+            100%{transform:scale(1);}
+        }
+
+        @media (max-width: 480px) {
+            section { padding: 60px 15px; }
+            .feature-wrap { padding: 40px 20px; }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">🍰 Arwens Cake & Candle Cupboard</div>
-  
-  <!-- Desktop menu -->
-  <div class="desktop-menu">
-    <a href="#menu">Bakes</a>
-    <a href="#gifts">Gifts</a>
-    <a href="#how">How</a>
-    <a href="#geocache">Treasure</a>
-    <a href="#find">Find</a>
-    <a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate</a>
-  </div>
+    <nav>
+        <div class="logo">🍰 Arwens Cake & Candle Cupboard</div>
+        
+        <div class="desktop-menu">
+            <a href="#menu">Bakes</a>
+            <a href="#gifts">Gifts</a>
+            <a href="#how">How it works</a>
+            <a href="#geocache">Treasure</a>
+            <a href="#find">Find Us</a>
+            <a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate</a>
+        </div>
 
-  <!-- Hamburger -->
-  <button class="hamburger" aria-label="Toggle menu">☰</button>
-</nav>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+    </nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#menu">Bakes</a>
-  <a href="#gifts">Gifts</a>
-  <a href="#how">How it works</a>
-  <a href="#geocache">Hidden Treasure</a>
-  <a href="#find">Find Us</a>
-  <a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate to Us</a>
-</div>
-
-<header>
-  <div class="hero">
-    <h1>Honest Bakes & Candles in Langdale</h1>
-    <p id="weatherText">Perfect day for cake ☀️</p>
-    <a href="#menu" class="btn">See today's bakes</a>
-  </div>
-</header>
-
-<section id="menu">
-  <h2>Today's Bakes</h2>
-  <div class="grid" id="menuGrid"></div>
-</section>
-
-<section id="gifts">
-  <h2>Langdale Candle Gifts</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.postimg.cc/Gmw7m8Bh/Candles.avif" alt="Candles">
-      <div class="card-body">
-        <h3>Langdale Candle Selection</h3>
-        <p>From £2.50 each</p>
-        <span class="badge available">Handmade Lake District collection</span>
-      </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#menu">Today's Bakes</a>
+        <a href="#gifts">Candle Gifts</a>
+        <a href="#how">How it works</a>
+        <a href="#geocache">Hidden Treasure</a>
+        <a href="#find">Find Us</a>
+        <a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate to Us</a>
     </div>
-  </div>
-</section>
 
-<section id="how">
-  <div class="feature-wrap">
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step"><div class="icon">🏡</div><div><h3>Visit</h3><p>Church Hall Cottage, Chapel Stile</p></div></div>
-      <div class="step"><div class="icon">🍰</div><div><h3>Choose</h3><p>Fresh cakes & gifts daily</p></div></div>
-      <div class="step"><div class="icon">💷</div><div><h3>Pay</h3><p>Cash or bank transfer</p></div></div>
-      <div class="step"><div class="icon">❤️</div><div><h3>Enjoy</h3><p>Perfect post-walk treat</p></div></div>
-    </div>
-  </div>
-</section>
+    <header>
+        <div class="hero">
+            <h1>Honest Fresh Bakes &amp; Handmade Candles in Langdale</h1>
+            <p id="weatherText">Perfect day for cake ☀️</p>
+            <a href="#menu" class="btn">See Today's Bakes</a>
+        </div>
+    </header>
 
-<section id="geocache">
-  <h2>Hidden Treasure Nearby 🧭</h2>
-  <div class="feature-wrap">
-    <p>There’s a hidden geocache nearby… can you find it?</p>
-    <div class="steps">
-      <div class="step"><div class="icon">📱</div><div><h3>Download</h3><p>Get the Geocaching app</p></div></div>
-      <div class="step"><div class="icon">🧭</div><div><h3>Search</h3><p>Explore around Chapel Stile</p></div></div>
-      <div class="step"><div class="icon">📦</div><div><h3>Discover</h3><p>Find the hidden container</p></div></div>
-      <div class="step"><div class="icon">🍰</div><div><h3>Reward</h3><p>Celebrate with cake!</p></div></div>
-    </div>
-    <a class="btn" href="https://www.geocaching.com/play" target="_blank">Start Geocaching</a>
-  </div>
-</section>
+    <section id="menu">
+        <h2>Today's Fresh Bakes in Langdale</h2>
+        <div class="grid" id="menuGrid"></div>
+    </section>
 
-<section id="find">
-  <h2>Find Us</h2>
-  <p>Church Hall Cottage, Chapel Stile, LA22 9JE</p>
-  <iframe src="https://www.google.com/maps?q=54.438611,-3.047306&z=18&output=embed" allowfullscreen="" loading="lazy"></iframe>
-</section>
+    <section id="gifts">
+        <h2>Handmade Langdale Candle Gifts</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://i.postimg.cc/Gmw7m8Bh/Candles.avif" alt="Handmade Lake District candles from Arwens Cake & Candle Cupboard">
+                <div class="card-body">
+                    <h3>Langdale Candle Selection</h3>
+                    <p>From £2.50 each</p>
+                    <span class="badge available">Handmade in the Lake District</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>Arwens Cake & Candle Cupboard</p>
-</footer>
+    <section id="how">
+        <div class="feature-wrap">
+            <h2>How Arwens Cake & Candle Cupboard Works</h2>
+            <div class="steps">
+                <div class="step"><div class="icon">🏡</div><div><h3>Visit Us</h3><p>Church Hall Cottage, Chapel Stile, Langdale</p></div></div>
+                <div class="step"><div class="icon">🍰</div><div><h3>Choose</h3><p>Fresh daily cakes, brownies &amp; flapjacks</p></div></div>
+                <div class="step"><div class="icon">💷</div><div><h3>Pay</h3><p>Cash or bank transfer</p></div></div>
+                <div class="step"><div class="icon">❤️</div><div><h3>Enjoy</h3><p>Perfect post-walk Lake District treat</p></div></div>
+            </div>
+        </div>
+    </section>
 
-<a class="floating-nav" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate</a>
+    <section id="geocache">
+        <h2>Hidden Treasure Nearby 🧭</h2>
+        <div class="feature-wrap">
+            <p>There’s a hidden geocache nearby… can you find it while exploring Langdale?</p>
+            <div class="steps">
+                <div class="step"><div class="icon">📱</div><div><h3>Download</h3><p>Get the Geocaching app</p></div></div>
+                <div class="step"><div class="icon">🧭</div><div><h3>Search</h3><p>Explore around Chapel Stile</p></div></div>
+                <div class="step"><div class="icon">📦</div><div><h3>Discover</h3><p>Find the hidden container</p></div></div>
+                <div class="step"><div class="icon">🍰</div><div><h3>Reward</h3><p>Celebrate with fresh cake!</p></div></div>
+            </div>
+            <a class="btn" href="https://www.geocaching.com/play" target="_blank">Start Geocaching</a>
+        </div>
+    </section>
 
-<script>
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+    <section id="find">
+        <h2>Find Us in Chapel Stile, Langdale</h2>
+        <p>Church Hall Cottage, Chapel Stile, Langdale, LA22 9JE</p>
+        <iframe src="https://www.google.com/maps?q=54.438611,-3.047306&z=18&output=embed" allowfullscreen="" loading="lazy" title="Location of Arwens Cake & Candle Cupboard"></iframe>
+    </section>
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  
-  // Optional: change icon to X when open
-  if (mobileMenu.classList.contains('active')) {
-    hamburger.textContent = '✕';
-  } else {
-    hamburger.textContent = '☰';
-  }
-});
+    <footer>
+        <p>&copy; Arwens Cake & Candle Cupboard • Langdale, Lake District</p>
+    </footer>
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    hamburger.textContent = '☰';
-  });
-});
+    <a class="floating-nav" href="https://www.google.com/maps/dir/?api=1&destination=54.438611,-3.047306" target="_blank">📍 Navigate</a>
 
-// Rest of your original script (menu items + observer + weather)
-const items=[
-  {name:"Chocolate Brownie",price:"£2.50",img:"https://i.postimg.cc/qRTN6gMx/Brownie.jpg",stock:20},
-  {name:"School Cake",price:"£2.50",img:"https://i.postimg.cc/br1nCJq3/School-Cake.webp",stock:20},
-  {name:"Double Chocolate Cookies",price:"£2.00",img:"https://i.postimg.cc/QxBk58L5/double-chocolate-cookies-53499-16x9.jpg",stock:20},
-  {name:"Fruit & Nut Flapjack",price:"£2.50",img:"https://i.postimg.cc/T1T2xYry/Fruit-Nut-Flapjack.jpg",stock:20},
-  {name:"Lemon Drizzle",price:"£2.50",img:"https://i.postimg.cc/6phWbz9z/lemon-drizzle-cake-6201175.avif",stock:20},
-  {name:"Victoria Sponge",price:"£2.50",img:"https://i.postimg.cc/CLgVyDrK/mary-berrys-perfect-34317-16x9.jpg",stock:20}
-];
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Arwens Cake & Candle Cupboard",
+      "image": "https://i.postimg.cc/vTVpV8PS/ntv5KPHq.jpg",
+      "description": "Fresh honest bakes and handmade candles in Langdale, Lake District. Located at Church Hall Cottage, Chapel Stile.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Hall Cottage, Chapel Stile",
+        "addressLocality": "Langdale",
+        "postalCode": "LA22 9JE",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.438611,
+        "longitude": -3.047306
+      },
+      "url": "https://yourusername.github.io",
+      "priceRange": "£",
+      "servesCuisine": "Bakery",
+      "openingHours": "Mo-Su 09:00-17:00"
+    }
+    </script>
 
-const grid = document.getElementById("menuGrid");
-items.forEach(item => {
-  let statusText = "Available today";
-  let statusClass = "available";
-  if(item.stock <= 2){
-    statusText = `Only ${item.stock} left`;
-    statusClass = "low";
-  }
-  const div = document.createElement("div");
-  div.className = "card";
-  div.innerHTML = `
-    <img src="${item.img}" loading="lazy" alt="${item.name}">
-    <div class="card-body">
-      <h3>${item.name}</h3>
-      <p>${item.price}</p>
-      <span class="badge ${statusClass}">${statusText}</span>
-    </div>
-  `;
-  grid.appendChild(div);
-});
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting) e.target.classList.add('visible');
-  });
-});
-document.querySelectorAll('.card').forEach(el => observer.observe(el));
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                hamburger.textContent = '✕';
+            } else {
+                hamburger.textContent = '☰';
+            }
+        });
 
-const hour = new Date().getHours();
-const weatherText = document.getElementById("weatherText");
-if(hour < 12) weatherText.innerText = "Perfect morning for cake ☕";
-else if(hour < 18) weatherText.innerText = "Perfect post-walk treat 🍰";
-else weatherText.innerText = "Evening sweet treat ✨";
-</script>
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.textContent = '☰';
+            });
+        });
+
+        // Menu items
+        const items = [
+            {name:"Chocolate Brownie",price:"£2.50",img:"https://i.postimg.cc/qRTN6gMx/Brownie.jpg",stock:20},
+            {name:"School Cake",price:"£2.50",img:"https://i.postimg.cc/br1nCJq3/School-Cake.webp",stock:20},
+            {name:"Double Chocolate Cookies",price:"£2.00",img:"https://i.postimg.cc/QxBk58L5/double-chocolate-cookies-53499-16x9.jpg",stock:20},
+            {name:"Fruit & Nut Flapjack",price:"£2.50",img:"https://i.postimg.cc/T1T2xYry/Fruit-Nut-Flapjack.jpg",stock:20},
+            {name:"Lemon Drizzle",price:"£2.50",img:"https://i.postimg.cc/6phWbz9z/lemon-drizzle-cake-6201175.avif",stock:20},
+            {name:"Victoria Sponge",price:"£2.50",img:"https://i.postimg.cc/CLgVyDrK/mary-berrys-perfect-34317-16x9.jpg",stock:20}
+        ];
+
+        const grid = document.getElementById("menuGrid");
+        items.forEach(item => {
+            let statusText = "Available today";
+            let statusClass = "available";
+            if(item.stock <= 2){
+                statusText = `Only ${item.stock} left`;
+                statusClass = "low";
+            }
+            const div = document.createElement("div");
+            div.className = "card";
+            div.innerHTML = `
+                <img src="${item.img}" loading="lazy" alt="${item.name} from Arwens Cake & Candle Cupboard">
+                <div class="card-body">
+                    <h3>${item.name}</h3>
+                    <p>${item.price}</p>
+                    <span class="badge ${statusClass}">${statusText}</span>
+                </div>
+            `;
+            grid.appendChild(div);
+        });
+
+        // Intersection Observer for cards
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if(e.isIntersecting) e.target.classList.add('visible');
+            });
+        });
+        document.querySelectorAll('.card').forEach(el => observer.observe(el));
+
+        // Weather / time message
+        const hour = new Date().getHours();
+        const weatherText = document.getElementById("weatherText");
+        if(hour < 12) weatherText.innerText = "Perfect morning for cake ☕";
+        else if(hour < 18) weatherText.innerText = "Perfect post-walk treat 🍰";
+        else weatherText.innerText = "Evening sweet treat ✨";
+    </script>
 </body>
 </html>
